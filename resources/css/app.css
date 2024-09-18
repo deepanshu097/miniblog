@@ -1,0 +1,477 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-title h1{
+    font-size: 55px;
+    margin-block: 10rem;
+}
+.user-page{
+    display: flex;
+    height: 100vh; 
+    justify-content: center; 
+  
+}
+/* SIDE NAVBAR HERE  */
+.side-nav{
+    width: 20%;
+    overflow: hidden;
+    position:sticky;
+    font-size: 25px;
+    height: 100vh;
+}
+.side-nav h4{
+    color: white;
+    width: 100%;
+    text-align:center;
+    font-size: 28px;
+}
+
+
+.nav-header{
+    display: block;
+    position: relative;
+    width: 100%;
+    top: 1rem;
+    bottom: 2rem;
+}
+
+.openbtn{
+    display: none;
+}
+#nav-open-btn{
+ display: none;
+}
+.side-nav ul{
+    display:block;
+    padding: 0;
+    margin-top: 1rem;
+    margin-inline: auto;
+    width: 90%;
+}
+.side-nav a svg{
+    margin-right: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.side-nav li{
+    width: 100%;
+    list-style: none;
+    padding-block: 1rem;
+    margin-inline: auto;
+}
+.side-nav li a{
+    font-size: 18px;
+   width: 100%;
+   color: white;
+   display:block;
+   margin-inline: auto;
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
+   border-radius: 1rem;
+}
+.side-nav li a:hover{
+    background-color: rgb(83, 81, 81);
+    color: white;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+ }
+
+footer{
+    border-top: rgb(83, 81, 81) 0.5px solid;
+    
+}
+
+.landing-page{
+    height: 100vh;
+}
+.join-now{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+}
+.social-links a{
+    background-color: white;
+    border-radius: 2rem;
+    padding-block: 0.5rem;
+    margin-block: 0.5rem;
+    text-decoration: none;
+}
+.social-links a:hover{
+   
+    text-decoration: none;
+}
+.x-input-label{
+    width: 50px;
+}
+/* FORM */
+form{
+    position: absolute;
+    top: 40%;
+}
+form button{
+    background-color: white;
+    border-radius: 1rem;
+}
+form button:hover{
+    background-color: rgb(158, 189, 227);
+    border-radius: 1rem;
+}
+.input-label{
+    display: flex;
+    flex-direction: column;
+}
+.input-label input{
+    padding-inline: 0.5rem;
+    height: 2rem;
+    margin: 0;
+    padding-block: 0;
+    border-radius: 1rem;
+    outline-color: rgb(158, 189, 227);
+    border-color: rgb(158, 189, 227);
+
+}
+
+.create-link a{
+    background-color: white;
+    border-radius: 2rem;
+    padding-block: 0.5rem;
+    margin-block: 0.5rem;
+    text-decoration: none;
+}
+.social-links small{
+   font-size: 0.6rem;
+   padding-inline: 1.5rem;
+   color: gray;
+}
+.login{
+    margin-top: 15%;
+}
+/* FORM */
+/* MAIN HERE  */
+.main{
+    width: 40%;
+    border-right:rgb(83, 81, 81) 0.5px solid;
+    border-left:rgb(83, 81, 81) 0.5px solid;
+    overflow-y: scroll;
+    padding: 20px;
+
+    /* Hide scrollbar but keep scrolling functionality */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.post{
+    border-bottom:rgb(83, 81, 81) 0.5px solid;
+    width: 100%;
+    overflow: hidden;
+}
+.post a{
+    font-size: 18px;
+    color: gray;
+    word-wrap: break-word;
+}
+.post p{
+    font-size: 18px;
+    word-break: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.post .post-content{
+    width: 100%;
+}
+ .post-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-body div{
+    width: 100%;
+}
+
+
+.post-body .post-img{
+    width: 100%;
+    margin-block: 0.5rem;
+}
+.post img{
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+}
+#post-options{
+    display: none;
+    position: relative;
+    width: 100px;
+    z-index: 1111;
+    background-color: rgb(100, 97, 97);
+}
+
+
+/* ADD POSTS */
+.add_post h4{
+    color: white;
+}
+.add_post div{
+    margin-block: 1rem;
+}
+.add_post form {
+    position: relative;
+    top: 20%;
+    padding:2rem;
+}
+.add_post form label{
+    display: block;
+    color: white;
+}
+.add_post form input{
+    width: 100%;
+    border-radius:1rem ;
+    height: 2.2rem;
+    outline-color:none ;
+    border-color: none;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    outline:none ;
+    border: none;
+    color: gray;
+    font: 18px;
+
+}
+.add_post form input[type="file"]{
+    width: 100%;
+    border-radius:1rem ;
+    height: 2.2rem;
+    border: 1px solid white;
+    padding-inline: 1rem;
+    padding-block: 0.1rem;
+    color: white;
+}
+
+.add_post form textarea{
+    width: 100%;
+    border-radius:1rem ;
+    outline:none ;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    color: gray;
+}
+.add_post form button{
+    width: 100%;
+    border-radius:1rem ;
+    outline:none ;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border: none;
+    color: gray;
+}
+.add_post form button:hover{
+    width: 100%;
+    border-radius:1rem ;
+    outline:none ;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border: none;
+    background-color: gray;
+    color: white;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+
+
+@media screen and (max-width:850px) {
+    .side-nav{
+        display: none;
+        width: 100%;
+        z-index: 111111111;
+        overflow: hidden; 
+        background-color: rgb(57, 59, 59);
+        backdrop-filter: blur(10px);
+    }
+    .main{
+        display: block;
+        width: 90%;
+        border-right:rgb(83, 81, 81) 0.5px solid;
+        border-left:rgb(83, 81, 81) 0.5px solid;
+        overflow-y: scroll;
+        padding: 1rem;
+    
+        /* Hide scrollbar but keep scrolling functionality */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+    }
+    #nav-open-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        background-color: rgba(57, 59, 59,0.2);
+        backdrop-filter: blur(5px);
+        position:fixed;
+        left: 0;
+        padding-block: 0.5rem;
+    }
+    .openbtn{
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-radius: 0.5rem;
+        background-color: rgba(57, 59, 59,0.2);
+        backdrop-filter: blur(5px);
+    } 
+    .openbtn svg{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: white;
+    }
+    #nav-open-btn button{
+        background-color: transparent;
+        display: block;
+        
+    } 
+}
+@media screen and (max-width:650px) {
+    .side-nav{
+        display: none;
+        width: 100%;
+        background-color: rgb(57, 59, 59);
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+        z-index: 11111;
+        overflow: hidden;
+    }
+    .side-nav a svg{
+        margin-inline: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+       
+    }
+    .side-nav li{
+        width: 80%;
+        list-style: none;
+        padding-block: 1rem;
+        margin-inline: auto;
+    }
+    .side-nav li a{
+        font-size: 16px;
+       width: 100%;
+       color: white;
+       display:block;
+       padding-inline: 1rem;
+       padding-block: 0.5rem;
+       border-radius: 1rem;
+    }
+
+    #side-nav{
+        display: none;
+        overflow: hidden;     
+    }
+    #nav-open-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        background-color: rgba(57, 59, 59,0.2);
+        backdrop-filter: blur(5px);
+        position:fixed;
+        left: 0;
+        padding-block: 0.5rem;
+    }
+    .openbtn{
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-radius: 0.5rem;
+        background-color: rgba(57, 59, 59,0.2);
+        backdrop-filter: blur(5px);
+    } 
+    .openbtn svg{
+        display: block;
+        width: 100%;
+        height: 100%;
+       
+        color: white;
+    }
+    #nav-open-btn button{
+        background-color: transparent;
+        display: block;
+        
+    }
+    .main{
+        display: block;
+        width: 100%;
+        border-right:rgb(83, 81, 81) 0.5px solid;
+        border-left:rgb(83, 81, 81) 0.5px solid;
+        overflow-y: scroll;
+        padding: 1rem;
+    
+        /* Hide scrollbar but keep scrolling functionality */
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+
+    .post a{
+        font-size: 14px;
+        color: gray;
+    }
+    .post p {
+        font-size: 14px;
+    }
+    .post .left{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
